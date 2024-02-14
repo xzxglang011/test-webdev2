@@ -1,0 +1,973 @@
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  text-decoration: none;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+}
+/*End of  Default */
+/* container */
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+}
+
+/* NAVbar */
+.navbar {
+  width: 100%;
+  height: 10rem;
+  background-color: #202020;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+
+.brand {
+  position: absolute;
+  top: 50%;
+  left: 8rem;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.logo1 {
+  width: 6rem;
+  height: 6rem;
+  border: 0.4rem solid #dba81b;
+}
+.logo2 {
+  width: 5rem;
+  height: 5rem;
+  border: 0.4 solid #202020;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.logo3 {
+  width: 5rem;
+  height: 5rem;
+  border: 0.4rem solid #dba81b;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.brand span {
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  margin: 1.5rem 0 0 3rem;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  right: 15rem;
+  transform: translateY(-50%);
+}
+
+.search-bar input {
+  width: 45rem;
+  height: 4rem;
+  background-color: #3e3e41;
+  border: none;
+  padding: 2rem 2rem 2rem 4rem;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.search-bar input::placeholder {
+  color: #ccc;
+}
+.search-bar i {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #ccc;
+}
+
+.menu-icon {
+  width: 4rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  right: 8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.line {
+  width: 4rem;
+  height: 0.2rem;
+  background-color: #ccc;
+  transition: all 0.3s;
+}
+
+.change .line-1 {
+  width: 55%;
+  transform: rotateZ(-15deg) translate(-0.2rem, 0.8rem);
+  background-color: #dba81b;
+}
+
+.change .line-2 {
+  background-color: #dba81b;
+}
+.change .line-3 {
+  width: 55%;
+  transform: rotateZ(15deg) translate(-0.2rem, -0.8rem);
+  background-color: #dba81b;
+}
+
+.navigation {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: #0b0b14;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.navbar.change .navigation {
+  top: 0;
+}
+
+.navigation a {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 5rem;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navbar.change .navigation a {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar.change .navigation a:nth-child(1) {
+  transition: all 0.3s 0.3s;
+}
+.navbar.change .navigation a:nth-child(2) {
+  transition: all 0.3s 0.4s;
+}
+.navbar.change .navigation a:nth-child(3) {
+  transition: all 0.3s 0.5s;
+}
+.navbar.change .navigation a:nth-child(4) {
+  transition: all 0.3s 0.6s;
+}
+.navbar.change .navigation a:nth-child(5) {
+  transition: all 0.3s 0.7s;
+}
+.navbar.change .navigation a:nth-child(6) {
+  transition: all 0.3s 0.8s;
+}
+
+.navigation a::before {
+  content: "";
+  width: 15rem;
+  height: 0.5rem;
+  position: absolute;
+  background-color: #dba81b;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -17rem;
+  transform: scale(0);
+  transform-origin: right;
+  transition: all 0.3s;
+}
+
+.navigation a:hover::before {
+  transform: scale(1);
+}
+
+.navigation a::after {
+  content: "";
+  width: 15rem;
+  height: 0.5rem;
+  position: absolute;
+  background-color: #dba81b;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17rem;
+  transform: scale(0);
+  transform-origin: left;
+  transition: all 0.3s;
+}
+.navigation a:hover::after {
+  transform: scale(1);
+}
+/* End of NAVbar */
+
+/* Landing */
+
+.landing {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+/* add */
+
+.landing-img {
+  width: 92%;
+  height: 80%;
+  position: absolute;
+  top: 11rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.banner {
+  position: absolute;
+  bottom: 15rem;
+  left: 15rem;
+}
+
+.banner-heading {
+  font-size: 9rem;
+  color: white;
+}
+
+.banner-heading span {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 8rem;
+  color: #dba81b;
+  letter-spacing: 0.5rem;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+}
+
+.banner-content p {
+  width: 45rem;
+  font-size: 2rem;
+  color: white;
+  margin-right: 2rem;
+}
+
+.banner-content button {
+  width: 15rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.3rem solid white;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* End of Landing */
+
+/* About */
+
+.about {
+  width: 100%;
+  height: 75vh;
+  background-color: #313133;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.about-left h1 {
+  font-size: 5rem;
+  color: white;
+  width: 50rem;
+  margin-bottom: 6rem;
+}
+
+.about-left p {
+  font-size: 2rem;
+  color: white;
+  width: 50rem;
+  margin-bottom: 5rem;
+}
+
+.about-left button {
+  width: 18rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.2rem solid #dba81b;
+  color: #dba81b;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.frame {
+  width: 50rem;
+  height: 35rem;
+  border: 3rem solid #555;
+  position: absolute;
+  top: 15rem;
+  right: 40rem;
+}
+
+.about-img-wrapper {
+  width: 50rem;
+  height: 35rem;
+  position: absolute;
+  top: 8rem;
+  right: 33rem;
+  border: 1rem solid #dba81b;
+}
+
+.about-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-bottom {
+  position: absolute;
+  bottom: 2rem;
+  right: 33rem;
+  height: 12rem;
+  border-right: 1rem solid #dba81b;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.section-bottom h1 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 6rem;
+  color: #555;
+  letter-spacing: 0.5rem;
+}
+
+.section-bottom h3 {
+  font-size: 2.5rem;
+  color: white;
+}
+/* End of About */
+
+/* Projects */
+
+.projects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.projects-heading {
+  font-size: 8rem;
+  color: white;
+  letter-spacing: 0.2rem;
+  margin: 7rem 0 10rem 9rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 35rem;
+  height: 50rem;
+  margin: 2.5rem;
+  border: 0.5rem solid #dba81b;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: scale(1.04);
+  border-radius: 3rem;
+  border: none;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.card-content::before {
+  content: "";
+  width: 92%;
+  height: 0.1rem;
+  background-color: #dba81b;
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.card-content::after {
+  content: "";
+  width: 0.1rem;
+  height: 94%;
+  background-color: #dba81b;
+  position: absolute;
+  left: 2rem;
+  top: 0rem;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.card:hover .card-content {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.card:hover .card-content::before {
+  transform: scale(1);
+  transform-origin: right;
+}
+.card:hover .card-content::after {
+  transform: scale(1);
+  transform-origin: top;
+}
+
+.card-content h1 {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  width: 15rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s;
+}
+
+.card-content p {
+  font-size: 1.6rem;
+  color: white;
+  position: absolute;
+  top: 13rem;
+  left: 4rem;
+  width: 14rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.card:hover .card-content p {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover .card-content h1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.designs.section-bottom {
+  border-right: 0;
+  position: absolute;
+  top: 30rem;
+  left: 8rem;
+  height: 12rem;
+  border-left: 1rem solid #dba81b;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.projects-btn {
+  width: 18rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.2rem solid #dba81b;
+  color: #dba81b;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: 45rem;
+  left: 8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.projects-btn:hover {
+  color: #202020;
+  background-color: #dba81b;
+  font-size: 2.2rem;
+}
+/* End of Projects */
+
+/* Customers */
+.customers {
+  width: 100%;
+  height: 80vh;
+  background-color: #313133;
+  padding-top: 7rem;
+  position: relative;
+}
+.customers-heading {
+  font-size: 8rem;
+  color: white;
+  margin: 0 0 10rem 9rem;
+  letter-spacing: 0.2rem;
+}
+
+.customers-content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.customers-card {
+  position: relative;
+}
+
+.customers-card img {
+  width: 20rem;
+  position: absolute;
+  top: -5rem;
+  right: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.customers-card-content {
+  width: 50rem;
+  height: 22rem;
+  background-color: #777;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.customers-card-content h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.customers-card-content h3 {
+  font-size: 1.8rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+.customers-card-content i {
+  font-size: 2rem;
+  color: white;
+}
+.customers-card-content p {
+  font-size: 1.6rem;
+  color: white;
+}
+/* End of Customers */
+/* Contact */
+.contact {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.contact-content input {
+  width: 45rem;
+  height: 4rem;
+  background-color: transparent;
+  padding: 1.5rem 1.5rem 2.2rem 0;
+  border: none;
+  border-bottom: 0.1rem solid #777;
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: all 0.3s;
+}
+
+.contact-content input:focus {
+  border-bottom: 0.1rem solid #dba81b;
+}
+
+.contact-content input::placeholder {
+  color: #ccc;
+  letter-spacing: 0.1rem;
+}
+.content-right {
+  position: relative;
+}
+.content-right i {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  color: #ccc;
+  cursor: pointer;
+}
+/* End of Contact */
+/* footer */
+.footer {
+  width: 100%;
+  height: 7rem;
+  background-color: #202020;
+  border-top: 0.1rem solid #3e3e41;
+  position: relative;
+}
+
+.brand-footer {
+  position: absolute;
+  top: 3.5rem;
+  left: 20%;
+}
+
+.brand-footer .logo1 {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid #dba81b;
+}
+.brand-footer .logo2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #202020;
+  top: 0.7rem;
+  left: 0.7em;
+}
+.brand-footer .logo3 {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #202020;
+  border: 0.2rem solid #dba81b;
+  top: 1.3rem;
+  left: 1.3em;
+}
+
+.brand-footer span {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20%;
+  font-size: 1.6rem;
+  color: #ccc;
+}
+/*End  of  footer */
+
+/* End of container */
+
+/* responsive */
+@media (max-width: 1700px) {
+  .banner {
+    left: 12rem;
+  }
+  .about-right {
+    margin-right: 20rem;
+  }
+
+  .frame {
+    width: 45rem;
+    height: 30rem;
+    right: 20rem;
+  }
+  .about-img-wrapper {
+    width: 45rem;
+    height: 30rem;
+    right: 13rem;
+  }
+  .experience,
+  .client {
+    right: 20rem;
+  }
+  .customers-content {
+    width: 90%;
+  }
+  .brand-footer {
+    left: 16%;
+  }
+  .copyright {
+    right: 16%;
+  }
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 55%;
+  }
+  .frame {
+    width: 40rem;
+    height: 25rem;
+    right: 15rem;
+  }
+
+  .about-img-wrapper {
+    width: 40rem;
+    height: 25rem;
+    right: 8rem;
+  }
+  .experience,
+  .client {
+    right: 12rem;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 49%;
+  }
+
+  .about-left p {
+    width: 40rem;
+  }
+
+  .customers-content {
+    width: 100%;
+  }
+
+  .experience,
+  .client {
+    right: 10rem;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+  .section-bottom h1 {
+    font-size: 5.5rem;
+  }
+  .brand-footer {
+    left: 10%;
+  }
+  .copyright {
+    right: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 45%;
+  }
+
+  .search-bar input {
+    width: 30rem;
+  }
+
+  .banner-heading {
+    font-size: 7rem;
+  }
+
+  .banner-heading span {
+    font-size: 7rem;
+  }
+
+  .banner-content p {
+    font-size: 1.7rem;
+    width: 35rem;
+  }
+
+  .about-left h1 {
+    font-size: 3rem;
+    width: 30rem;
+  }
+
+  .about-left p {
+    font-size: 1.7rem;
+    width: 30rem;
+  }
+
+  .frame {
+    width: 30rem;
+    height: 15rem;
+    border: 1.5rem solid #555;
+    top: 30%;
+    right: 10rem;
+  }
+
+  .about-img-wrapper {
+    width: 30rem;
+    height: 15rem;
+    right: 18%;
+    top: 35%;
+  }
+  .section-bottom {
+    height: 10rem;
+  }
+  .section-bottom h1 {
+    font-size: 4.5rem;
+  }
+  .customers-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .customers-card:nth-child(1) {
+    margin-bottom: 10rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-left {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 35%;
+  }
+  .brand-navbar span {
+    display: none;
+  }
+
+  .navigation a {
+    font-size: 3rem;
+  }
+
+  .navigation a::before,
+  .navigation a::after {
+    width: 10rem;
+  }
+
+  .navigation a::before {
+    left: -13rem;
+  }
+  .navigation a::after {
+    right: -13rem;
+  }
+
+  .banner {
+    left: 5rem;
+    bottom: 18rem;
+  }
+  .banner-heading {
+    font-size: 5rem;
+  }
+
+  .banner-heading span {
+    font-size: 4rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    position: relative;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .about-left h1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .about-left p {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+  }
+  .about-left button {
+    position: absolute;
+    top: 50rem;
+  }
+
+  .about .frame {
+    display: none;
+  }
+
+  .about-img-wrapper {
+    width: 30rem;
+    height: 30rem;
+    right: 50%;
+    transform: translateX(50%);
+    top: 35rem;
+  }
+  .experience,
+  .client {
+    right: 5rem;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .projects-heading {
+    font-size: 6rem;
+    width: 100%;
+    margin: 5rem auto 15rem auto;
+    padding: 0;
+    text-align: center;
+  }
+  .section-bottom h1 {
+    font-size: 4rem;
+  }
+
+  .designs.section-bottom {
+    top: 15rem;
+    left: 10%;
+  }
+  .projects .projects-btn {
+    top: 17.5rem;
+    left: 65%;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* End of responsive */
